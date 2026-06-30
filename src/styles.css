@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens — ported from the React reference (clinical teal cockpit).
+ * Defined twice on purpose:
+ *  - @theme  → generates Tailwind utilities (bg-surface, text-muted-foreground, …)
+ *  - :root   → short aliases (var(--primary), …) for inline styles, color-mix
+ *              and ECharts option objects.
+ */
+@theme {
+  --color-background: #f5f7f8;
+  --color-foreground: #1b2126;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1f4f6;
+  --color-muted: #eceff2;
+  --color-muted-foreground: #6b7480;
+  --color-border: #e3e8ec;
+  --color-border-strong: #cfd6dc;
+  --color-primary: #0f9d9d;
+  --color-primary-foreground: #ffffff;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-destructive: #dc2626;
+  --color-sidebar: #0f1822;
+  --color-sidebar-foreground: #c6cdd6;
+  --color-sidebar-border: #1d2733;
+  --color-sidebar-accent: #1a2531;
+  --color-chart-1: #0f9d9d;
+  --color-chart-2: #2563eb;
+  --color-chart-3: #16a34a;
+  --color-chart-4: #f59e0b;
+  --color-chart-5: #8b5cf6;
+  --font-mono: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}
+
+:root {
+  --background: #f5f7f8;
+  --foreground: #1b2126;
+  --surface: #ffffff;
+  --surface-2: #f1f4f6;
+  --muted: #eceff2;
+  --muted-foreground: #6b7480;
+  --border: #e3e8ec;
+  --border-strong: #cfd6dc;
+  --primary: #0f9d9d;
+  --primary-foreground: #ffffff;
+  --success: #16a34a;
+  --warning: #d97706;
+  --destructive: #dc2626;
+  --sidebar: #0f1822;
+  --sidebar-foreground: #c6cdd6;
+  --sidebar-border: #1d2733;
+  --sidebar-accent: #1a2531;
+  --chart-1: #0f9d9d;
+  --chart-2: #2563eb;
+  --chart-3: #16a34a;
+  --chart-4: #f59e0b;
+  --chart-5: #8b5cf6;
+  --font-mono: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* tabular numbers — used heavily in the cockpit for aligned figures */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
