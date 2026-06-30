@@ -23,7 +23,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -35,6 +35,9 @@ jobs:
         run: npm run build -- --base-href=/cinify-coding-challenge/
 
       - uses: actions/configure-pages@v5
+        with:
+          # Auto-enables Pages with GitHub Actions as source if not yet configured.
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
